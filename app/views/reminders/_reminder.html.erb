@@ -1,6 +1,5 @@
 <div class="bg-[#010B14] rounded-lg shadow-md p-6 mb-8">
   <p class="text-2xl"><%= reminder.body %></p>
-  <p><%= reminder.due_date.strftime("%B %y, %-l:%M %p") %></p>
-  <p><%= reminder.spam_interval %></p>
-  <p><%= reminder.spam_repetitions %></p>
+  <p>Remember to do this task by <span class="font-bold text-l"><%= reminder.due_date.strftime("%B %y, %-l:%M %p") %></span></p>
+  <p>Message this number every <span class="font-bold text-l"><%= reminder.spam_interval %></span> minutes and do it <span class="font-bold text-l"><%= reminder.spam_repetitions.humanize %> times</span></p>
 </div>

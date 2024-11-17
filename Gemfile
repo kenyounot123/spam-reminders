@@ -64,5 +64,7 @@ end
 
 gem "tailwindcss-rails", "~> 3.0"
 
-gem "hotwire-livereload", "~> 1.4", :group => :development
+gem "hotwire-livereload", "~> 1.4", group: :development
 gem "redis"
+
+gem "humanize", "~> 3.1"
