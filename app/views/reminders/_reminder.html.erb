@@ -1,3 +1,6 @@
-<div>
-  <p><%= reminder.body %></p>
+<div class="bg-[#010B14] rounded-lg shadow-md p-6 mb-8">
+  <p class="text-2xl"><%= reminder.body %></p>
+  <p><%= reminder.due_date.strftime("%B %y, %-l:%M %p") %></p>
+  <p><%= reminder.spam_interval %></p>
+  <p><%= reminder.spam_repetitions %></p>
 </div>

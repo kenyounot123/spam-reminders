@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_16_211510) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_17_012759) do
   create_table "reminders", force: :cascade do |t|
     t.string "body", null: false
-    t.datetime "due", null: false
+    t.datetime "due_date", null: false
     t.integer "spam_interval", null: false
     t.integer "spam_repetitions", null: false
     t.datetime "created_at", null: false
