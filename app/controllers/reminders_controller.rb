@@ -10,7 +10,7 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new(reminder_params)
     if @reminder.save
       respond_to do |format|
-        format.turbo_stream { }
+        format.turbo_stream
       end
     else
       respond_to do |format|
@@ -19,9 +19,15 @@ class RemindersController < ApplicationController
     end
   end
 
-  private
+  def destroy
+    @reminder = Reminder.find(params[:id])
+    @reminder.destroy
 
-  def reminder_params
-    params.expect(reminder: [ :body, :due_date, :spam_interval, :spam_repetitions ])
+    redirect_to root_path, status: :see_other
   end
+
+  private
+    def reminder_params
+      params.expect(reminder: [ :body, :due_date, :spam_interval, :spam_repetitions ])
+    end
 end

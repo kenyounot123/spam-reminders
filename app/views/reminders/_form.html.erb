@@ -8,8 +8,7 @@
 
     <div class="mb-4">
       <%= f.label :due_date, "Due Date" %>
-      <%= f.date_field :due_date_date, class: "text-black bg-white/90 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50" %>
-      <%= f.time_field :due_date_time, class: "text-black bg-white/90 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50" %>
+      <%= f.date_field :due_date, class: "text-black bg-white/90 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50" %>
     </div>
 
     <div class="mb-4">
@@ -27,7 +26,7 @@
 
     <div class="flex justify-between grow items-center">
       <%= link_to reminders_path do %>
-        <button class="border-[#F45B69] border-2 rounded py-2 px-5 hover:bg-red-500/80 hover:border-red-500 transition-all duration-75 ease-in-out font-semibold">
+        <button class="border-[#F45B69] border rounded py-2 px-5 hover:bg-red-500/80 hover:border-red-500 transition-all duration-75 ease-in-out font-semibold">
           Cancel
         </button>
       <% end %>

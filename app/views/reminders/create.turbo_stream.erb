@@ -1,1 +1,2 @@
 <%= turbo_stream.append("reminders", partial: "reminder", locals: { reminder: @reminder }) %>
+<%= turbo_stream.update("reminder_form", partial: "form", locals: { reminder: Reminder.new }) %>
