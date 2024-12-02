@@ -68,3 +68,5 @@ gem "hotwire-livereload", "~> 1.4", group: :development
 gem "redis"
 
 gem "humanize", "~> 3.1"
+# Use Twilio Ruby gem for sending sms to users
+gem "twilio-ruby", "~> 7.3.6"

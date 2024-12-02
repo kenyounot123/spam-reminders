@@ -6,6 +6,7 @@ class RemindersController < ApplicationController
   def new
     @reminder = Reminder.new
   end
+
   def create
     @reminder = Reminder.new(reminder_params)
     if @reminder.save
@@ -28,6 +29,6 @@ class RemindersController < ApplicationController
 
   private
     def reminder_params
-      params.expect(reminder: [ :body, :due_date, :spam_interval, :spam_repetitions ])
+      params.expect(reminder: [ :body, :due_date, :due_time, :spam_interval, :spam_repetitions ])
     end
 end
