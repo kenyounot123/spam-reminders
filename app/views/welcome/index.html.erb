@@ -1,16 +1,16 @@
 <div>
   <%= render "shared/navbar" %>
   <main class="flex flex-col items-center py-48 gap-5">
-    <h1 class="text-6xl max-w-5xl text-center">The persistent reminder app that actually gets things done</h1>
-    <p class="text-2xl text-white/50">Never forget to do something again.</p>
+    <h1 class="text-5xl max-w-5xl text-center font-semibold">The persistent reminder app that actually gets things done</h1>
+    <p class="text-2xl text-white/50 text-center">Never forget to do something again.</p>
     <%= link_to reminders_path do %>
       <button class="bg-[var(--primary)] text-white px-4 py-2 rounded-md"> Get Started </button>
     <% end %>
   </main>
-  <div class="absolute bottom-5 left-5">
-    <%= image_tag "hero_landing.svg", class: "w-[300px]" %>
+  <div class="hidden absolute bottom-5 left-5 md:block">
+    <%= image_tag "hero_landing.svg", class: "w-[250px]" %>
   </div>
-  <div class="absolute bottom-5 right-5">
+  <div class="hidden absolute bottom-5 right-5 md:block">
     <%= image_tag "hero_landing_2.svg", class: "w-[300px]" %>
   </div>
 </div>

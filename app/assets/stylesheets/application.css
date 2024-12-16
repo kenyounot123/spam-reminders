@@ -11,10 +11,12 @@
 
 :root {
   --primary: #F45B69;
-  --background: #010B14;
+  --bg-secondary: #010B14;
+  --text-primary: #dee5e5;
+  --bg-primary: #011627;
 }
 
 body {
-  background-color: #011627;
-  color: #dee5e5;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }

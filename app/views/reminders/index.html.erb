@@ -1,7 +1,7 @@
 <div class="flex justify-center items-center py-48">
   <div class="p-5">
     <div class="flex justify-between gap-10 mb-5">
-      <h1 class="font-semibold text-3xl">My reminders</h1>
+      <h1 class="font-semibold text-3xl">My reminders <%= Current.user.email_address %></h1>
       <%= link_to "Create Reminder", new_reminder_path, data: { turbo_frame: "reminder_form" }, role: "button", aria: { label: "Create Reminder"}, class: "bg-[var(--primary)] hover:bg-[var(--primary)]/80 p-2 rounded font-semibold" %>
     </div>
 

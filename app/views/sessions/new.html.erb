@@ -1,4 +1,4 @@
-<div class="mx-auto md:w-2/3 w-full">
+<div class="mx-auto w-[400px] h-screen flex flex-col justify-center items-center">
   <% if alert = flash[:alert] %>
     <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg inline-block" id="alert"><%= alert %></p>
   <% end %>
@@ -6,26 +6,38 @@
   <% if notice = flash[:notice] %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
+  <%# <h1 class="font-semibold text-4xl text-center">Remindr</h1> %>
 
-  <h1 class="font-semibold text-4xl">Sign in</h1>
-
-  <%= form_with url: session_url, class: "contents" do |form| %>
-    <div class="my-5">
-      <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "Enter your email address", value: params[:email_address], class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  <div class="rounded-lg p-10 bg-[var(--bg-secondary)] shadow-md shadow-[var(--primary)]">
+    <div class="w-full flex justify-center items-center">
+      <%= link_to landing_path do %>
+        <button class="w-min p-2 rounded-md bg-[var(--text-primary)] shadow-md shadow-white text-black mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+          </svg>
+        </button>
+      <% end %>
     </div>
-
-    <div class="my-5">
-      <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: "Enter your password", maxlength: 72, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-    </div>
-
-    <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-      <div class="inline">
-        <%= form.submit "Sign in", class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <h1 class="font-semibold text-2xl text-center">Sign in with email</h1>
+    <p class="text-center mt-2 mb-4">Create reminders, and never forget</p>
+    <%= form_with url: session_url, class: "flex flex-col gap-3" do |form| %>
+      <div class="max-w-sm">
+        <%= form.email_field :email_address, required: true, autofocus: true, placeholder: "Email Address", value: params[:email_address], class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full my-2" %>
       </div>
-
-      <div class="mt-4 text-sm sm:mt-0">
+      <div class="max-w-sm">
+        <%= form.password_field :password, required: true, placeholder: "Password", maxlength: 72, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 w-full" %>
+      </div>
+      <div class="text-sm self-end mb-2">
         <%= link_to "Forgot password?", new_password_path, class: "underline" %>
       </div>
-    </div>
-  <% end %>
+
+      <div class="w-full">
+        <%= form.submit "Sign in", class: "w-full rounded-lg py-1 px-5 bg-[var(--primary)] text-white inline-block font-medium cursor-pointer" %>
+      </div>
+      <div class="text-sm self-center">
+        <p class="inline">Already have an account? </p>
+        <%= link_to "sign up here", new_registration_path, class: "inline underline" %>
+      </div>
+    <% end %>
+  </div>
 </div>
