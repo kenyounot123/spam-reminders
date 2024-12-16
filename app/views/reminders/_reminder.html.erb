@@ -7,6 +7,6 @@
   
 
   <p class="text-2xl"><%= reminder.body %></p>
-  <p>Remember to do this task by <span class="font-bold text-l"><%= reminder.due_date.strftime("%B %y, %-l:%M %p") %></span></p>
-  <p>Message this number every <span class="font-bold text-l"><%= reminder.spam_interval %></span> minutes and do it <span class="font-bold text-l"><%= reminder.spam_repetitions.humanize %> times</span></p>
+  <p>Remember to do this task by <span class="font-semibold text-l"><%= reminder.due_date.strftime("%B %y, %-l:%M %p") %></span></p>
+  <p>Message this number every <span class="font-semibold text-l"><%= reminder.spam_interval %></span> minutes and do it <span class="font-semibold text-l"><%= reminder.spam_repetitions.humanize %> times</span></p>
 </div>

@@ -2,12 +2,14 @@
 
 one:
   body: MyString
-  due: 2024-11-16 14:08:25
-  spam_interval: 2024-11-16 14:08:25
+  due_date: 2024-11-16
+  due_time: <%= Time.zone.parse('14:08:25') %>
+  spam_interval: 2
   spam_repetitions: 1
 
 two:
   body: MyString
-  due: 2024-11-16 14:08:25
-  spam_interval: 2024-11-16 14:08:25
+  due_date: 2024-11-16
+  due_time: <%= Time.zone.parse('14:08:25') %>
+  spam_interval: 2
   spam_repetitions: 1
