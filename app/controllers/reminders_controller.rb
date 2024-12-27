@@ -10,6 +10,7 @@ class RemindersController < ApplicationController
   def create
     @reminder = Reminder.new(reminder_params)
     if @reminder.save
+      # This is where we initialize the Twilio messaging service to send the reminder to the user.
       respond_to do |format|
         format.turbo_stream
       end
