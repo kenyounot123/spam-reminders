@@ -131,10 +131,10 @@ GEM
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hotwire-livereload (1.4.1)
-      actioncable (>= 6.0.0)
+    hotwire-livereload (2.0.0)
+      actioncable (>= 7.0.0)
       listen (>= 3.0.0)
-      railties (>= 6.0.0)
+      railties (>= 7.0.0)
     humanize (3.1.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -424,7 +424,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
-  hotwire-livereload (~> 1.4)
+  hotwire-livereload (~> 2.0)
   humanize (~> 3.1)
   importmap-rails
   jbuilder
