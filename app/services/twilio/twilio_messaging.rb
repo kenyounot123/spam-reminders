@@ -1,7 +1,7 @@
 # Use this service to send SMS messages to users.
 class Twilio::MessagingService
   def initialize
-    @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
+    @client = Twilio::REST::Client.new
   end
 
   def send_message(to:, body:)
